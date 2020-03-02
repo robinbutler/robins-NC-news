@@ -1,8 +1,23 @@
 import React, { Component } from "react";
+import Loading from "./Loading";
+import * as api from "../utils/api";
 
 class ArticleList extends Component {
+  state = {
+    articles: [],
+    isLoading: true
+  };
+
+  componentDidMount() {
+    api.fetchArticles().then(articles => {
+      console.log("hello");
+      this.setState({ articles, isLoading: false });
+    });
+  }
   render() {
-    return <div>article list here</div>;
+    const { isLoading } = this.state;
+    if (isLoading) return <Loading />;
+    return <main>article list here</main>;
   }
 }
 

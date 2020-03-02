@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "@reach/router";
+import ArticleList from "./ArticleList";
 
 const Homepage = () => {
   return (
@@ -10,6 +11,8 @@ const Homepage = () => {
       <Link to="/articles">
         <button>All Articles</button>
       </Link>
+      <h3>Top articles</h3>
+      <ArticleList />
     </div>
   );
 };
