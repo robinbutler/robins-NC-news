@@ -8,11 +8,11 @@ const Homepage = () => {
       <Link to="/topics">
         <button>All Topics</button>
       </Link>
-      <Link to="/articles">
+      <Link to="/articles/999">
         <button>All Articles</button>
       </Link>
-      <h3>Top articles</h3>
-      <ArticleList />
+      <h2>Top articles</h2>
+      <ArticleList limit={5} />
     </div>
   );
 };

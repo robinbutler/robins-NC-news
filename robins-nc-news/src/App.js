@@ -18,7 +18,8 @@ function App() {
       <main className="Mainpage">
         <Router>
           <Homepage path="/" />
-          <ArticleList path="/articles" />
+          <ArticleList path="/articles/:limit" />
+          <ArticleList path="/topic/:slug/articles/:limit" />
           <TopicList path="/topics" />
         </Router>
       </main>

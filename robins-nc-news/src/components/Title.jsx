@@ -1,10 +1,15 @@
 import React from "react";
+import { Link } from "@reach/router";
 
 const Title = () => {
   return (
-    <header>
-      <h1>Robin's News</h1>
-    </header>
+    <Link to="/">
+      <button>
+        <header>
+          <h1>Robin's News</h1>
+        </header>
+      </button>
+    </Link>
   );
 };
 

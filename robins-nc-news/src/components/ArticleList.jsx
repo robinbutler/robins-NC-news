@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Loading from "./Loading";
 import * as api from "../utils/api";
+import ArticleCard from "./ArticleCard";
 
 class ArticleList extends Component {
   state = {
@@ -9,15 +10,28 @@ class ArticleList extends Component {
   };
 
   componentDidMount() {
-    api.fetchArticles().then(articles => {
-      console.log("hello");
+    api.fetchTopArticles(this.props).then(articles => {
       this.setState({ articles, isLoading: false });
     });
   }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.slug !== this.props.slug) {
+      api.fetchTopArticles(this.props).then(articles => {
+        this.setState({ articles, isLoading: false });
+      });
+    }
+  }
   render() {
-    const { isLoading } = this.state;
+    const { isLoading, articles } = this.state;
     if (isLoading) return <Loading />;
-    return <main>article list here</main>;
+    return (
+      <main>
+        {articles.map(article => {
+          return <ArticleCard article={article} key={article.article_id} />;
+        })}
+      </main>
+    );
   }
 }
 

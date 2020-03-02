@@ -1,11 +1,22 @@
 const axios = require("axios");
 
-const fetchArticles = () => {
+const fetchTopArticles = ({ slug, limit }) => {
+  console.log(limit);
   return axios
-    .get("https://robins-nc-news-host.herokuapp.com/api/articles")
+    .get("https://robins-nc-news-host.herokuapp.com/api/articles", {
+      params: { sort_by: "votes", topic: `${slug}`, limit: `${limit}` }
+    })
     .then(({ data: { articles } }) => {
       return articles;
     });
 };
 
-module.exports = { fetchArticles };
+const fetchTopics = () => {
+  return axios
+    .get("https://robins-nc-news-host.herokuapp.com/api/topics")
+    .then(({ data: { topics } }) => {
+      return topics;
+    });
+};
+
+module.exports = { fetchTopArticles, fetchTopics };
