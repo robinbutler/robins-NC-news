@@ -27,6 +27,7 @@ class ArticleList extends Component {
     if (isLoading) return <Loading />;
     return (
       <main>
+        <select>Sort By</select>
         {articles.map(article => {
           return <ArticleCard article={article} key={article.article_id} />;
         })}
