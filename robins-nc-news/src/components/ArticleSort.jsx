@@ -2,7 +2,6 @@ import React, { Component } from "react";
 
 class ArticleSort extends Component {
   handleSort = sort_by => {
-    console.log(sort_by);
     this.props.sortArticles(sort_by);
   };
 

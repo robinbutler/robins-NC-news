@@ -6,18 +6,25 @@ import { Link } from "@reach/router";
 class Nav extends Component {
   render() {
     return (
-      <main>
-        <Menu right id={"sidebar"} className={"my-menu"}>
-          <Link to="/">
-            <p>Home</p>
+      <>
+        <main className="Nav">
+          <Link to="/post">
+            <div>
+              <h2 className="PostArticle">Post article</h2>
+            </div>
           </Link>
-          <Link to="/topics">
-            <p>Topics</p>
-          </Link>
-          <Link to="/articles/999">Articles</Link>
-        </Menu>
-        <Title />
-      </main>
+          <Menu right id={"sidebar"} className={"my-class"}>
+            <Link to="/">
+              <p>Home</p>
+            </Link>
+            <Link to="/topics">
+              <p>Topics</p>
+            </Link>
+            <Link to="/articles/999">Articles</Link>
+          </Menu>
+          <Title />
+        </main>
+      </>
     );
   }
 }

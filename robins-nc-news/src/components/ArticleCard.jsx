@@ -14,16 +14,22 @@ const ArticleCard = ({
   }
 }) => {
   return (
-    <section className="ArticleCard">
-      <Link to={`/article/${article_id}`}>
-        <h4>{title}</h4>
+    <main className="Card">
+      <section className="ACHeader">
         <p>Topic: {topic}</p>
-        <p>Author: {author}</p>
-        <p>Posted: {created_at}</p>
-        <p>comments: {comment_count}</p>
+        <Voter id={article_id} name="articles" votes={votes} />
+      </section>
+      <Link to={`/article/${article_id}`}>
+        <section className="ACMain">
+          <p>By: {author}</p>
+          <h2>{title}</h2>
+        </section>
+        <section className="ACFooter">
+          <div>Posted: {created_at}</div>
+          <div>Comments: {comment_count}</div>
+        </section>
       </Link>
-      <Voter id={article_id} name="articles" votes={votes} />
-    </section>
+    </main>
   );
 };
 

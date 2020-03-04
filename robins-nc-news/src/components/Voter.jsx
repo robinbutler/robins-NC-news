@@ -15,23 +15,23 @@ class Voter extends Component {
   };
   render() {
     return (
-      <section>
+      <section className="Voter">
         <button
           disabled={this.state.optimistic === 1}
           onClick={() => {
             this.handleClick(1);
           }}
         >
-          Up Vote
+          Up
         </button>
-        <p>Ranking: {this.props.votes + this.state.optimistic}</p>
+        <p className="VotesLogo">{this.props.votes + this.state.optimistic}</p>
         <button
           disabled={this.state.optimistic === -1}
           onClick={() => {
             this.handleClick(-1);
           }}
         >
-          Down Vote
+          Down
         </button>
       </section>
     );

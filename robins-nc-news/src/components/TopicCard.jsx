@@ -3,14 +3,14 @@ import { Link } from "@reach/router";
 
 const TopicCard = ({ topic: { description, slug } }) => {
   return (
-    <section>
-      <Link to={`/topic/${slug}/articles/999`}>
-        <button>
-          <h4>{slug}</h4>
+    <Link to={`/topic/${slug}/articles/999`}>
+      <section className="Card">
+        <div className="ACMain">
           <p>{description}</p>
-        </button>
-      </Link>
-    </section>
+          <h2>{slug}</h2>
+        </div>
+      </section>
+    </Link>
   );
 };
 

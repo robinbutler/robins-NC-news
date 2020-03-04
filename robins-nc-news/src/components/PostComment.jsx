@@ -20,7 +20,7 @@ class PostComment extends Component {
   handleSubmit = event => {
     event.preventDefault();
     this.props.insertComment(this.state.currentUser, this.state.comment);
-    this.setState({ userInput: "" });
+    this.setState({ comment: "" });
   };
 
   render() {

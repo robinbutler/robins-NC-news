@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import * as api from "../utils/api";
 import Loading from "./Loading";
 import CommentList from "./CommentList";
+import Voter from "./Voter";
 
 class ArticleDetail extends Component {
   state = {
@@ -24,7 +25,8 @@ class ArticleDetail extends Component {
       topic,
       author,
       body,
-      created_at
+      created_at,
+      article_id
     } = this.state.article;
     return (
       <>
@@ -34,6 +36,7 @@ class ArticleDetail extends Component {
         <p>Rating: {votes}</p>
         <p>User: {author}</p>
         <p>Posted on: {created_at}</p>
+        <Voter id={article_id} name="articles" votes={votes} />
         <CommentList
           article_id={this.props.article_id}
           username={this.props.username}

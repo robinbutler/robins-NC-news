@@ -11,18 +11,22 @@
   padding: 5px;
 }
 
+.Nav {
+  display: flex;
+  justify-content: center;
+  padding-right: 50px;
+}
+
 .Mainpage {
   background-color: aquamarine;
   grid-area: main;
   overflow: scroll;
-  padding: 5px;
 }
 
 .Footer {
   grid-area: footer;
   background-color: green;
   padding: 5px;
-  border-radius: 10%;
 }
 
 .ArticleSort {
@@ -31,16 +35,56 @@
   align-items: center;
 }
 
-.ArticleCard {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  border-radius: 5%;
+.Card {
+  display: grid;
+  grid-template-areas: "ACHeader" "ACMain" "ACFooter";
+  grid-template-rows: 10% 1fr 10%;
+  border-radius: 10px;
   background-color: white;
   list-style: none;
+  text-decoration: none;
+
   margin: 15px;
-  padding: 5px;
+  padding: 15px 5px 5px 5px;
+}
+
+.ACHeader {
+  grid-area: ACHeader;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ACMain {
+  grid-area: ACMain;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+}
+
+.ACFooter {
+  grid-area: ACFooter;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.HomepageButtons {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.Voter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  max-height: 30px;
+  text-align: center;
 }
 
 .ClockLogo {
@@ -52,23 +96,27 @@
 
 .VotesLogo {
   background-image: url("./images/likes.png");
-  background-size: 40px;
-  height: 38px;
-  width: 40px;
+  background-size: 100%;
+  height: 42px;
+  width: 46px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
 }
 
 .CommentsLogo {
   background-image: url("./images/comments.png");
-  background-size: 40px;
-  height: 38px;
-  width: 40px;
+  background-size: 45px;
+  height: 42px;
+  width: 46px;
 }
 
 .lds-roller {
   display: inline-block;
-  position: relative;
-  width: 80px;
-  height: 80px;
+  position: fixed;
+  align-items: center;
 }
 .lds-roller div {
   animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;

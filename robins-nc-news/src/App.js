@@ -7,6 +7,7 @@ import ArticleList from "./components/ArticleList";
 import TopicList from "./components/TopicList";
 import ArticleDetail from "./components/ArticleDetail";
 import React, { Component } from "react";
+import PostArticle from "./components/PostArticle";
 
 class App extends Component {
   state = {
@@ -28,6 +29,7 @@ class App extends Component {
               path="/article/:article_id"
               username={this.state.username}
             />
+            <PostArticle path="/post" username={this.state.username} />
           </Router>
         </main>
         <footer className="Footer">

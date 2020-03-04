@@ -50,9 +50,21 @@ const deleteComment = comment_id => {
 };
 
 const patchVotes = (id, value, type) => {
-  axios.patch(`https://robins-nc-news-host.herokuapp.com/api/${type}/${id}`, {
-    inc_votes: value
-  });
+  return axios.patch(
+    `https://robins-nc-news-host.herokuapp.com/api/${type}/${id}`,
+    {
+      inc_votes: value
+    }
+  );
+};
+
+const postArticle = user => {
+  console.log(user);
+  return axios.post(
+    `https://robins-nc-news-host.herokuapp.com/api/articles`,
+
+    user
+  );
 };
 
 module.exports = {
@@ -62,5 +74,6 @@ module.exports = {
   fetchCommentsByArticleId,
   postComment,
   deleteComment,
-  patchVotes
+  patchVotes,
+  postArticle
 };

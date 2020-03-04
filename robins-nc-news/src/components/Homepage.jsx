@@ -4,16 +4,18 @@ import ArticleList from "./ArticleList";
 
 const Homepage = () => {
   return (
-    <div>
-      <Link to="/topics">
-        <button>All Topics</button>
-      </Link>
-      <Link to="/articles/999">
-        <button>All Articles</button>
-      </Link>
+    <main>
+      <section className="HomepageButtons">
+        <Link to="/topics">
+          <button>All Topics</button>
+        </Link>
+        <Link to="/articles/999">
+          <button>All Articles</button>
+        </Link>
+      </section>
       <h2>Top articles</h2>
       <ArticleList limit={5} />
-    </div>
+    </main>
   );
 };
 
