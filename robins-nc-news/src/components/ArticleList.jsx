@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Loading from "./Loading";
 import * as api from "../utils/api";
 import ArticleCard from "./ArticleCard";
+import ArticleSort from "./ArticleSort";
 
 class ArticleList extends Component {
   state = {
@@ -22,12 +23,19 @@ class ArticleList extends Component {
       });
     }
   }
+
+  sortArticles = name => {
+    api.fetchTopArticles(this.props, name).then(articles => {
+      this.setState({ articles, isLoading: false });
+    });
+  };
+
   render() {
     const { isLoading, articles } = this.state;
     if (isLoading) return <Loading />;
     return (
       <main>
-        <select>Sort By</select>
+        <ArticleSort sortArticles={this.sortArticles} />
         {articles.map(article => {
           return <ArticleCard article={article} key={article.article_id} />;
         })}

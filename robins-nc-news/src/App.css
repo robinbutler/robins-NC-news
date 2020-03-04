@@ -1,24 +1,67 @@
 .App {
   display: grid;
   grid-template-areas: "header header" "main main" "footer footer";
-  grid-template-rows: 8 0px 1fr 50px;
+  grid-template-rows: 80px 1fr 50px;
   height: 100vh;
 }
 
 .HeaderBar {
   background-color: red;
   grid-area: header;
+  padding: 5px;
 }
 
 .Mainpage {
   background-color: aquamarine;
   grid-area: main;
   overflow: scroll;
+  padding: 5px;
 }
 
 .Footer {
   grid-area: footer;
   background-color: green;
+  padding: 5px;
+  border-radius: 10%;
+}
+
+.ArticleSort {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.ArticleCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 5%;
+  background-color: white;
+  list-style: none;
+  margin: 15px;
+  padding: 5px;
+}
+
+.ClockLogo {
+  background-image: url("./images/clock.png");
+  background-size: 40px;
+  height: 38px;
+  width: 40px;
+}
+
+.VotesLogo {
+  background-image: url("./images/likes.png");
+  background-size: 40px;
+  height: 38px;
+  width: 40px;
+}
+
+.CommentsLogo {
+  background-image: url("./images/comments.png");
+  background-size: 40px;
+  height: 38px;
+  width: 40px;
 }
 
 .lds-roller {
