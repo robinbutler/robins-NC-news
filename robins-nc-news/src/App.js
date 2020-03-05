@@ -8,6 +8,7 @@ import TopicList from "./components/TopicList";
 import ArticleDetail from "./components/ArticleDetail";
 import React, { Component } from "react";
 import PostArticle from "./components/PostArticle";
+import ErrorHandler from "./components/ErrorHandler";
 
 class App extends Component {
   state = {
@@ -23,13 +24,20 @@ class App extends Component {
           <Router>
             <Homepage path="/" />
             <TopicList path="/topics" />
-            <ArticleList path="/articles/:limit" />
-            <ArticleList path="/topic/:slug/articles/:limit" />
-            <ArticleDetail
-              path="/article/:article_id"
+            <ArticleList
+              path="/articles/:limit"
               username={this.state.username}
             />
+            <ArticleList
+              path="/topic/:slug/articles/:limit"
+              username={this.state.username}
+            />
+            <ArticleDetail path="/article/:article_id" />
             <PostArticle path="/post" username={this.state.username} />
+            <ErrorHandler
+              default
+              error={{ msg: "Path not found", status: "404" }}
+            />
           </Router>
         </main>
         <footer className="Footer">

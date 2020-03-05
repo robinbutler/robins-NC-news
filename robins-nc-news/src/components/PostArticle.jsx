@@ -32,7 +32,6 @@ class PostArticle extends Component {
   handleSubmit = event => {
     event.preventDefault();
     const { topic, title, body, author } = this.state;
-    console.log(topic);
     api.postArticle({ title, body, topic, author }).then(response => {
       console.log(response);
     });

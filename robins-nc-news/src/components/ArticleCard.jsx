@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "@reach/router";
 import Voter from "./Voter";
+import Delete from "./Delete";
 
 const ArticleCard = ({
   article: {
@@ -11,7 +12,9 @@ const ArticleCard = ({
     created_at,
     comment_count,
     article_id
-  }
+  },
+  username,
+  removeArticle
 }) => {
   return (
     <main className="Card">
@@ -29,6 +32,13 @@ const ArticleCard = ({
           <div>Comments: {comment_count}</div>
         </section>
       </Link>
+      {author === username && (
+        <Delete
+          name={"article"}
+          article_id={article_id}
+          removeArticle={removeArticle}
+        />
+      )}
     </main>
   );
 };

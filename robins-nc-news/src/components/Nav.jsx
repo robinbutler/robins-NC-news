@@ -7,12 +7,13 @@ class Nav extends Component {
   render() {
     return (
       <>
-        <main className="Nav">
+        <main>
           <Link to="/post">
-            <div>
+            <div className="Nav">
               <h2 className="PostArticle">Post article</h2>
             </div>
           </Link>
+          <Title />
           <Menu right id={"sidebar"} className={"my-class"}>
             <Link to="/">
               <p>Home</p>
@@ -22,7 +23,6 @@ class Nav extends Component {
             </Link>
             <Link to="/articles/999">Articles</Link>
           </Menu>
-          <Title />
         </main>
       </>
     );

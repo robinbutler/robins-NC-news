@@ -1,9 +1,9 @@
 const axios = require("axios");
 
-const fetchTopArticles = ({ topic, limit }, sort_by) => {
+const fetchTopArticles = ({ username, slug, limit }, sort_by) => {
   return axios
     .get("https://robins-nc-news-host.herokuapp.com/api/articles", {
-      params: { sort_by, topic, limit }
+      params: { limitls, topic: slug, sort_by }
     })
     .then(({ data: { articles } }) => {
       return articles;
@@ -59,11 +59,15 @@ const patchVotes = (id, value, type) => {
 };
 
 const postArticle = user => {
-  console.log(user);
   return axios.post(
     `https://robins-nc-news-host.herokuapp.com/api/articles`,
-
     user
+  );
+};
+
+const deleteArticle = article_id => {
+  return axios.delete(
+    `https://robins-nc-news-host.herokuapp.com/api/articles/${article_id}`
   );
 };
 
@@ -75,5 +79,6 @@ module.exports = {
   postComment,
   deleteComment,
   patchVotes,
-  postArticle
+  postArticle,
+  deleteArticle
 };
