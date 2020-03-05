@@ -21,7 +21,7 @@ const ArticleCard = ({
       <Link to={`/article/${article_id}`}>
         <section className="ACTop">
           <p>By: {author}</p>
-          <div>Posted: {created_at}</div>
+          <div>Posted on: {created_at.substring(0, 10)}</div>
         </section>
         <section className="ACMain">
           <p>Topic: {topic}</p>
@@ -29,8 +29,8 @@ const ArticleCard = ({
         </section>
       </Link>
       <section className="ACFooter">
-        <Voter id={article_id} name="articles" votes={votes} />
         <div>Comments: {comment_count}</div>
+        <Voter id={article_id} name="articles" votes={votes} />
       </section>
       {author === username && (
         <Delete

@@ -6,27 +6,30 @@
 }
 
 .HeaderBar {
-  background-color: red;
+  background-color: #5685cc;
   grid-area: header;
   padding: 5px;
 }
 
 .Nav {
+  grid-area: header;
   display: flex;
-  justify-content: flex-start;
-  align-items: ;
-  padding-right: 50px;
+}
+
+.Title {
+  justify-self: center;
+  color: #ff5719;
 }
 
 .Mainpage {
-  background-color: aquamarine;
+  background-color: #85f5ff;
   grid-area: main;
   overflow: scroll;
 }
 
 .Footer {
   grid-area: footer;
-  background-color: green;
+  background-color: #5685cc;
   padding: 5px;
 }
 
@@ -40,7 +43,7 @@
   display: flex;
   flex-shrink: 1;
   margin: 15px;
-  border-radius: 10px;
+  border-radius: 100%;
   justify-content: center;
 }
 
@@ -52,10 +55,27 @@
   background-color: white;
   list-style: none;
   text-decoration: none;
-  text-align: center;
-
+  text-align: left;
+  color: #cc55bd;
   margin: 15px;
   padding: 15px 5px 5px 5px;
+}
+.example-enter {
+  opacity: 0.01;
+}
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.example-leave {
+  opacity: 1;
+}
+
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
 }
 
 .CommentsTitle {
@@ -152,13 +172,11 @@
   width: 46px;
 }
 
-.IndividualArticle {
-}
-
 .lds-roller {
   display: inline-block;
   position: fixed;
-  align-items: center;
+  left: 40%;
+  top: 40%;
 }
 .lds-roller div {
   animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;

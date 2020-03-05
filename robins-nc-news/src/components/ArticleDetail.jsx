@@ -57,10 +57,10 @@ class ArticleDetail extends Component {
             <p>Topic: {topic}</p>
             <p>User: {author}</p>
           </div>
-          <p className="ACHeader">{title}</p>
+          <h2 className="ACHeader">{title}</h2>
           <p>{body}</p>
           <div className="ACFooter">
-            <p>Posted at: {created_at}</p>
+            <p>Posted on: {created_at.substring(0, 10)}</p>
             <Voter id={article_id} name="articles" votes={votes} />
           </div>
         </section>

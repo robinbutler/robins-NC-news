@@ -11,8 +11,10 @@ const CommentCard = ({
     <section className="Card">
       <p>Author: {author}</p>
       <p>{body}</p>
-      <p>Posted: {created_at}</p>
-      <Voter id={comment_id} name={"comments"} votes={votes} />
+      <section className="ACFooter">
+        <p>Posted on: {created_at.substring(0, 10)}</p>
+        <Voter id={comment_id} name={"comments"} votes={votes} />
+      </section>
       {author === username && (
         <Delete
           name={"comment"}
