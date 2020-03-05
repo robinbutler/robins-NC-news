@@ -27,7 +27,7 @@ class PostComment extends Component {
     const { isLoading } = this.state;
     if (isLoading) return <Loading />;
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form onSubmit={this.handleSubmit} className="Form">
         <textarea
           className="CommentBox"
           rows="4"

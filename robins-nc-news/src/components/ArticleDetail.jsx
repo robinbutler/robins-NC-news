@@ -52,12 +52,18 @@ class ArticleDetail extends Component {
     } = this.state.article;
     return (
       <>
-        <p>{title}</p>
-        <p>{body}</p>
-        <p>Topic: {topic}</p>
-        <p>User: {author}</p>
-        <p>Posted on: {created_at}</p>
-        <Voter id={article_id} name="articles" votes={votes} />
+        <section className="Card">
+          <div className="ACTop">
+            <p>Topic: {topic}</p>
+            <p>User: {author}</p>
+          </div>
+          <p className="ACHeader">{title}</p>
+          <p>{body}</p>
+          <div className="ACFooter">
+            <p>Posted at: {created_at}</p>
+            <Voter id={article_id} name="articles" votes={votes} />
+          </div>
+        </section>
         <CommentList
           article_id={this.props.article_id}
           username={this.props.username}

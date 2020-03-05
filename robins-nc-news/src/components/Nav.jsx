@@ -9,7 +9,7 @@ class Nav extends Component {
       <>
         <main>
           <Link to="/post">
-            <div className="Nav">
+            <div>
               <h2 className="PostArticle">Post article</h2>
             </div>
           </Link>

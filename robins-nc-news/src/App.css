@@ -13,7 +13,8 @@
 
 .Nav {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: ;
   padding-right: 50px;
 }
 
@@ -35,17 +36,39 @@
   align-items: center;
 }
 
+.Form {
+  display: flex;
+  flex-shrink: 1;
+  margin: 15px;
+  border-radius: 10px;
+  justify-content: center;
+}
+
 .Card {
   display: grid;
-  grid-template-areas: "ACHeader" "ACMain" "ACFooter";
-  grid-template-rows: 10% 1fr 10%;
+  grid-template-areas: "ACTop" "ACHeader" "ACMain" "ACFooter";
+  grid-template-rows: auto auto auto auto;
   border-radius: 10px;
   background-color: white;
   list-style: none;
   text-decoration: none;
+  text-align: center;
 
   margin: 15px;
   padding: 15px 5px 5px 5px;
+}
+
+.CommentsTitle {
+  margin: 15px;
+}
+
+.ACTop {
+  grid-area: ACTop;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: small;
 }
 
 .ACHeader {
@@ -62,6 +85,7 @@
   flex-direction: column-reverse;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .ACFooter {
@@ -126,6 +150,9 @@
   background-size: 45px;
   height: 42px;
   width: 46px;
+}
+
+.IndividualArticle {
 }
 
 .lds-roller {

@@ -18,20 +18,20 @@ const ArticleCard = ({
 }) => {
   return (
     <main className="Card">
-      <section className="ACHeader">
-        <p>Topic: {topic}</p>
-        <Voter id={article_id} name="articles" votes={votes} />
-      </section>
       <Link to={`/article/${article_id}`}>
-        <section className="ACMain">
+        <section className="ACTop">
           <p>By: {author}</p>
+          <div>Posted: {created_at}</div>
+        </section>
+        <section className="ACMain">
+          <p>Topic: {topic}</p>
           <h2>{title}</h2>
         </section>
-        <section className="ACFooter">
-          <div>Posted: {created_at}</div>
-          <div>Comments: {comment_count}</div>
-        </section>
       </Link>
+      <section className="ACFooter">
+        <Voter id={article_id} name="articles" votes={votes} />
+        <div>Comments: {comment_count}</div>
+      </section>
       {author === username && (
         <Delete
           name={"article"}

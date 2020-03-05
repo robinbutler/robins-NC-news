@@ -3,7 +3,7 @@ const axios = require("axios");
 const fetchTopArticles = ({ username, slug, limit }, sort_by) => {
   return axios
     .get("https://robins-nc-news-host.herokuapp.com/api/articles", {
-      params: { limitls, topic: slug, sort_by }
+      params: { limit, topic: slug, sort_by }
     })
     .then(({ data: { articles } }) => {
       return articles;

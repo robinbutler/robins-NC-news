@@ -4,7 +4,7 @@ import { Link } from "@reach/router";
 const Title = () => {
   return (
     <Link to="/">
-      <header>
+      <header className="Nav">
         <h1>Robin's News</h1>
       </header>
     </Link>

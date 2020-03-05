@@ -8,7 +8,7 @@ const CommentCard = ({
   removeComment
 }) => {
   return (
-    <section>
+    <section className="Card">
       <p>Author: {author}</p>
       <p>{body}</p>
       <p>Posted: {created_at}</p>

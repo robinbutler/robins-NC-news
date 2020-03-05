@@ -51,6 +51,7 @@ class CommentList extends Component {
           username={this.props.username}
           insertComment={this.insertComment}
         />
+        <h3 className="CommentsTitle">Comments:</h3>
         {comments.map(comment => {
           return (
             <CommentCard
