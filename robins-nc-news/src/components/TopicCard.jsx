@@ -3,7 +3,7 @@ import { Link } from "@reach/router";
 
 const TopicCard = ({ topic: { description, slug } }) => {
   return (
-    <Link to={`/topic/${slug}/articles/999`}>
+    <Link to={`/topic/${slug}/articles/999`} className="Link">
       <section className="Card">
         <div className="ACMain">
           <p>{description}</p>

@@ -18,7 +18,7 @@ const ArticleCard = ({
 }) => {
   return (
     <main className="Card">
-      <Link to={`/article/${article_id}`}>
+      <Link to={`/article/${article_id}`} className="Link">
         <section className="ACTop">
           <p>By: {author}</p>
           <div>Posted on: {created_at.substring(0, 10)}</div>
