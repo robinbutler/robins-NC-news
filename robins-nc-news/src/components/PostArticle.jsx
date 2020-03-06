@@ -6,8 +6,7 @@ class PostArticle extends Component {
     isLoading: true,
     topic: "",
     title: "",
-    body: "",
-    author: this.props.username
+    body: ""
   };
 
   componentDidMount() {
@@ -31,7 +30,8 @@ class PostArticle extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    const { topic, title, body, author } = this.state;
+    const { topic, title, body } = this.state;
+    const author = this.props.username;
     api.postArticle({ title, body, topic, author }).then(response => {
       console.log(response);
     });
@@ -63,7 +63,6 @@ class PostArticle extends Component {
             rows="4"
             cols="40"
             name="article"
-            form="usrform"
             placeholder="Wrtie your article here!"
             value={this.state.body}
             onChange={this.handleBodyChange}

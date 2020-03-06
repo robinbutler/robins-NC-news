@@ -50,6 +50,7 @@ class ArticleDetail extends Component {
       created_at,
       article_id
     } = this.state.article;
+
     return (
       <>
         <section className="Card">

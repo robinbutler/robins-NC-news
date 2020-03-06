@@ -8,7 +8,7 @@ const CommentCard = ({
   removeComment
 }) => {
   return (
-    <section className="Card">
+    <main className="Card">
       <p>Author: {author}</p>
       <p>{body}</p>
       <section className="ACFooter">
@@ -22,7 +22,7 @@ const CommentCard = ({
           removeComment={removeComment}
         />
       )}
-    </section>
+    </main>
   );
 };
 

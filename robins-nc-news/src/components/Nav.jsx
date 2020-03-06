@@ -8,7 +8,7 @@ class Nav extends Component {
   render() {
     return (
       <>
-        <main>
+        <nav>
           <section className="Nav">
             <PostButton />
             <Title />
@@ -22,7 +22,7 @@ class Nav extends Component {
             </Link>
             <Link to="/articles/999">Articles</Link>
           </Menu>
-        </main>
+        </nav>
       </>
     );
   }

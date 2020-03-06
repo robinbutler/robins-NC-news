@@ -13,7 +13,7 @@ const Homepage = () => {
           <button>All Articles</button>
         </Link>
       </section>
-      <h2>Top articles</h2>
+      <h2 className="TopArticles">Top articles</h2>
       <ArticleList limit={5} />
     </main>
   );

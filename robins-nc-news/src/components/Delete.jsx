@@ -19,6 +19,7 @@ class Delete extends Component {
         onClick={this.handleDelete}
         name={this.props.name}
         disabled={this.state.hasBeenPressed === true}
+        className="ACTop"
       >
         Delete {this.props.type}
       </button>

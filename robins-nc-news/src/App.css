@@ -6,31 +6,41 @@
 }
 
 .HeaderBar {
-  background-color: #5685cc;
+  background-color: rgba(80, 207, 217, 1);
   grid-area: header;
   padding: 5px;
 }
 
 .Nav {
   grid-area: header;
-  display: flex;
+  display: grid;
+  grid-template-areas: "add title menu";
+  grid-template-columns: 30% auto 30%;
 }
 
 .Title {
+  grid-area: title;
   justify-self: center;
   color: #ff5719;
 }
 
+.TopArticles {
+  display: flex;
+  justify-content: center;
+}
+
 .Mainpage {
-  background-color: #85f5ff;
+  background: linear-gradient(
+    rgba(80, 207, 217, 1) 0%,
+    rgba(84, 144, 227, 1) 100%
+  );
   grid-area: main;
   overflow: scroll;
 }
 
 .Footer {
   grid-area: footer;
-  background-color: #5685cc;
-  padding: 5px;
+  background-color: rgba(84, 144, 227, 1);
 }
 
 .ArticleSort {
@@ -57,8 +67,9 @@
   text-decoration: none;
   text-align: left;
   color: #cc55bd;
-  margin: 15px;
+  margin: 20px 20px 20px 20px;
   padding: 15px 5px 5px 5px;
+  box-shadow: 5px 5px 5px 0px rgba(130, 130, 130, 1);
 }
 .example-enter {
   opacity: 0.01;

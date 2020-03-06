@@ -32,7 +32,10 @@ class App extends Component {
               path="/topic/:slug/articles/:limit"
               username={this.state.username}
             />
-            <ArticleDetail path="/article/:article_id" />
+            <ArticleDetail
+              path="/article/:article_id"
+              username={this.state.username}
+            />
             <PostArticle path="/post" username={this.state.username} />
             <ErrorHandler
               default

@@ -33,7 +33,6 @@ class PostComment extends Component {
           rows="4"
           cols="40"
           name="comment"
-          form="usrform"
           onChange={this.handleChange}
           value={this.state.userInput}
           placeholder="Write a comment..."
