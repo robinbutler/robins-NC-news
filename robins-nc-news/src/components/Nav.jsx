@@ -14,7 +14,7 @@ class Nav extends Component {
               <p className="Account">Account: {this.props.username}</p>
               <PostButton />
             </section>
-            <Title />
+            <Title className="Link" />
           </section>
           <Menu right id={"sidebar"} className={"my-class"}>
             <Link to="/" className="Link">
