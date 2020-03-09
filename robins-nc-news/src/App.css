@@ -20,11 +20,15 @@
   text-decoration: none;
 }
 
+.Account {
+  grid-area: add;
+  font-size: small;
+}
+
 .Title {
   grid-area: title;
-  justify-self: center;
-  color: #ff5719;
-  text-decoration: none;
+  display: flex;
+  justify-content: center;
 }
 
 .Link {
@@ -36,13 +40,20 @@
   justify-content: center;
 }
 
+.PostArticle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .Mainpage {
   background: linear-gradient(
     rgba(80, 207, 217, 1) 0%,
     rgba(84, 144, 227, 1) 100%
   );
   grid-area: main;
-  overflow: scroll;
+  overflow-y: scroll;
   text-decoration: none;
 }
 
@@ -152,6 +163,9 @@
   max-height: 30px;
   text-align: center;
 }
+.gol {
+  border-radius: 100px;
+}
 
 .UpArrow {
   background-image: url("./images/arrow.png");
@@ -187,11 +201,41 @@
   text-decoration: none;
 }
 
+.Error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.x {
+  grid-area: ACTop;
+  background-image: url("./images/x.png");
+  background-size: 105%;
+  height: 50px;
+  width: 50px;
+}
+
 .CommentsLogo {
   background-image: url("./images/comments.png");
   background-size: 45px;
   height: 42px;
   width: 46px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  border-radius: 15px;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background: #c2c9d2;
 }
 
 .lds-roller {

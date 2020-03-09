@@ -10,17 +10,22 @@ class Nav extends Component {
       <>
         <nav>
           <section className="Nav">
-            <PostButton />
+            <section className="Account">
+              <p className="Account">Account: {this.props.username}</p>
+              <PostButton />
+            </section>
             <Title />
           </section>
           <Menu right id={"sidebar"} className={"my-class"}>
-            <Link to="/">
+            <Link to="/" className="Link">
               <p>Home</p>
             </Link>
-            <Link to="/topics">
+            <Link to="/topics" className="Link">
               <p>Topics</p>
             </Link>
-            <Link to="/articles/999">Articles</Link>
+            <Link to="/articles/999" className="Link">
+              Articles
+            </Link>
           </Menu>
         </nav>
       </>

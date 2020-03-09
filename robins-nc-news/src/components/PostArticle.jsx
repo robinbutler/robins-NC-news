@@ -41,10 +41,11 @@ class PostArticle extends Component {
 
   render() {
     return (
-      <main>
-        <h2>Add a new article!</h2>
+      <main className="PostArticle">
+        <h2 className="PAheader">Add a new article!</h2>
         <form onSubmit={this.handleSubmit}>
           <input
+            className="PATopic"
             type="text"
             placeholder="Topic"
             value={this.state.topic}
@@ -52,6 +53,7 @@ class PostArticle extends Component {
             required={true}
           ></input>
           <input
+            className="PATitle"
             type="text"
             placeholder="Title"
             value={this.state.title}
@@ -68,7 +70,7 @@ class PostArticle extends Component {
             onChange={this.handleBodyChange}
             required={true}
           ></textarea>
-          <button>Submit Article</button>
+          <button className="PAButton">Submit Article</button>
         </form>
       </main>
     );

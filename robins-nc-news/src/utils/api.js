@@ -66,6 +66,7 @@ const postArticle = user => {
 };
 
 const deleteArticle = article_id => {
+  console.log(article_id);
   return axios.delete(
     `https://robins-nc-news-host.herokuapp.com/api/articles/${article_id}`
   );

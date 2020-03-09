@@ -18,7 +18,7 @@ class App extends Component {
     return (
       <section className="App">
         <header className="HeaderBar">
-          <Nav />
+          <Nav username={this.state.username} />
         </header>
         <main className="Mainpage">
           <Router>
